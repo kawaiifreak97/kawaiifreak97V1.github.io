@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>@KAWAIIFREAK97</title>
+    <meta name="description" content="@KAWAIIFREAK97">
+    <script src="js/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+            <img id="TamTexture" src="https://scontent.fakl1-1.fna.fbcdn.net/v/t1.0-9/10390435_914050438618585_3115402939145621078_n.jpg?oh=f129c57f50c7558182fefd818b61295c&oe=59416376">
+            <img id="NashTexture" src="https://scontent.fakl1-1.fna.fbcdn.net/v/t1.0-0/p206x206/15781130_1285134384887374_892909960800249561_n.jpg?oh=beb766a1b7f0c21bd90636201b380b2f&oe=5948051D">
+            <img id="MaloTexture" src="https://scontent.fakl1-1.fna.fbcdn.net/v/t1.0-0/q84/p206x206/1010485_819810064729661_7906478232407840139_n.jpg?oh=d0014aa0c1be534b2cb438ce9db6430b&oe=59036949">
+            <img id="DevonTexture" src="https://scontent.fakl1-1.fna.fbcdn.net/v/t1.0-9/16508842_909613002520733_5152856927679281462_n.jpg?oh=8f2b02741378e18eb26796d00d169b4e&oe=58FDF5AC">
+            <img id="ZeeTexture" src="https://scontent.fakl1-1.fna.fbcdn.net/v/t1.0-0/q82/p206x206/14479524_1543291699030019_8621361953749313564_n.jpg?oh=ea2a1f8e586120dfae767b1ae91bc09b&oe=5903490B">
+            
+            
+            
+            
+        </a-assets>
+        
+        <a-box src="#TamTexture" position="0 1 -10" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="position" to="0 2 -3" direction="alternate" dur="4000"
+            repeat="indefinite"></a-animation>
+            <a-animation attribute="rotation" to="45 90 90" direction="alternate" dur="4000"
+            repeat="indefinite"></a-animation>
+        </a-box>
+        
+        <a-box src="#NashTexture" position="10 1 -1" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="position" to="4 1 -1" direction="alternate" dur="4000"
+            repeat="indefinite"></a-animation>
+            <a-animation attribute="rotation" to="45 90 90" direction="alternate" dur="4000"
+            repeat="indefinite"></a-animation>
+        </a-box>
+        
+        <a-box src="#MaloTexture" position="-10 1 -1" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="position" to="-4 1 -1" direction="alternate" dur="4000"
+            repeat="indefinite"></a-animation>
+            <a-animation attribute="rotation" to="45 90 90" direction="alternate" dur="4000"
+            repeat="indefinite"></a-animation>
+        </a-box>
+        
+        <a-box src="#DevonTexture" position="0 1 10" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="position" to="0 2 3" direction="alternate" dur="4000"
+            repeat="indefinite"></a-animation>
+            <a-animation attribute="rotation" to="45 90 90" direction="alternate" dur="4000"
+            repeat="indefinite"></a-animation>
+        </a-box>
+        
+        <a-box src="#ZeeTexture" position="80 1 -10" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="position" to="80 2 -3" direction="alternate" dur="4000"
+            repeat="indefinite"></a-animation>
+            <a-animation attribute="rotation" to="45 90 90" direction="alternate" dur="4000"
+            repeat="indefinite"></a-animation>
+        </a-box>
+        
+        <a-sky src="vids/4minute.mp4" ></a-sky>
+        
+        <a-camera>
+    <a-cursor></a-cursor>
+  </a-camera>
+      
+    </a-scene>
+  </body>
+</html>

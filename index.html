@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>@KAWAIIFREAK97</title>
+    <meta name="description" content="@KAWAIIFREAK97">
+    <script src="js/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+            <img id="TamTexture" src="https://scontent.fakl1-1.fna.fbcdn.net/v/t1.0-9/10390435_914050438618585_3115402939145621078_n.jpg?oh=f129c57f50c7558182fefd818b61295c&oe=59416376">
+            
+            <a-plane id="tam-dj"  color="white" geometry="primitive: circle" ></a-plane>
+            
+            
+            
+            <a-image id="unco-blue" src="pics/unco-blue.png"></a-image>
+            
+            <a-sky id="sky" src="vids/Pok%C3%A9mon%20in%20360%20degree%20video.mp4" ></a-sky>
+            <a-sky id="sky2" src="vids/4minute.mp4" ></a-sky>
+            
+        </a-assets>
+        
+             
+        
+        <a-plane src="#tam-dj" width="30" height="30" position="0 0 -20" geometry="primitive: circle"scale="15 15 15"></a-plane>
+        <a-plane src="#tam-dj" width="30" height="30" position="0 0 20" geometry="primitive: circle"scale="15 15 15"></a-plane>
+        
+        <a-plane src="#tam-dj" width="30" height="30" position="20 0 0" rotation="0 90 0" geometry="primitive: circle"scale="15 15 15"></a-plane>
+        <a-plane src="#tam-dj" width="30" height="30" position="-20 0 0" rotation="0 -90 0" geometry="primitive: circle"scale="15 15 15"></a-plane>
+        
+        <a-box src="#TamTexture" position="0 6 0" rotation="0 0 2" scale="2 2 2">
+            <a-animation attribute="position" to="0 4 0" direction="alternate" dur="4000"
+            repeat="indefinite"></a-animation>
+            <a-animation attribute="rotation" to="360 360 60" direction="alternate" dur="4000"
+            repeat="indefinite"></a-animation>
+        </a-box>
+        
+        <a-image src="#unco-blue" scale="20 20 20" position="0 -20 0" rotation= "-90 0 0" opacity="0.35">
+        <a-animation attribute="position" to="0 -10 0" direction="alternate" dur="2000"
+            repeat="indefinite"></a-animation>
+            <a-animation attribute="rotation" to="-90 0 360" direction="alternate" dur="5000"
+            repeat="indefinite"></a-animation>
+        </a-image>
+        
+    
+        <a-entity 
+        id="uncoemail"
+        href="mailto:uncoolpeoplemanagement@gmail.com" 
+        position="0 -5 0"   
+        rotation="-90 0 0" 
+        anchor="align"          
+        text="width: 14; 
+        align: center;
+        value:For Bookings, exclusives, collaborations and general enquiries contact uncoolpeoplemanagement@gmail.com; 
+        color:white"          
+        ></a-entity>
+        
+        
+        
+       
+        
+        
+        
+        <a-camera>
+    <a-cursor></a-cursor>
+  </a-camera>
+        
+        <a-sky src="#sky2"></a-sky>
+      
+    </a-scene>
+  </body>
+</html>
