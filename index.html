@@ -11,29 +11,31 @@
         <a-assets>
             <img id="TamTexture" src="https://scontent.fakl1-1.fna.fbcdn.net/v/t1.0-9/10390435_914050438618585_3115402939145621078_n.jpg?oh=f129c57f50c7558182fefd818b61295c&oe=59416376">
             
-            <a-plane id="tam-dj"  color="white" geometry="primitive: circle" ></a-plane>
             
+            <a-video id="tam-dj-no-sound" autoplay loop="true" src="vids/tam-dj_converted.mp4" geometry="primitive: circle"></a-video>
+            <a-video id="tam-dj" autoplay loop="true" src="vids/tam-dj.mp4" geometry="primitive: circle" ></a-video>
             
+            <a-item id="miku-obj" src="obj/miku/source/Miku.obj"></a-item>
+            <a-item id="miku-mtl" src="obj/miku/source/Miku.mtl"></a-item>
             
             <a-image id="unco-blue" src="pics/unco-blue.png"></a-image>
             
             <a-sky id="sky" src="vids/Pok%C3%A9mon%20in%20360%20degree%20video.mp4" ></a-sky>
-            <a-sky id="sky2" src="vids/4minute.mp4" ></a-sky>
             
         </a-assets>
         
              
         
-        <a-plane src="#tam-dj" width="30" height="30" position="0 0 -20" geometry="primitive: circle"scale="15 15 15"></a-plane>
-        <a-plane src="#tam-dj" width="30" height="30" position="0 0 20" geometry="primitive: circle"scale="15 15 15"></a-plane>
+        <a-video src="#tam-dj" width="30" height="30" position="0 0 -20" geometry="primitive: circle"scale="15 15 15" opacity="0.9"></a-video>
+        <a-video src="#tam-dj-no-sound" width="30" height="30" position="0 0 20" geometry="primitive: circle"scale="15 15 15" opacity="0.9"></a-video>
         
-        <a-plane src="#tam-dj" width="30" height="30" position="20 0 0" rotation="0 90 0" geometry="primitive: circle"scale="15 15 15"></a-plane>
-        <a-plane src="#tam-dj" width="30" height="30" position="-20 0 0" rotation="0 -90 0" geometry="primitive: circle"scale="15 15 15"></a-plane>
+        <a-video src="#tam-dj-no-sound" width="30" height="30" position="20 0 0" rotation="0 90 0" geometry="primitive: circle"scale="15 15 15" opacity="0.9"></a-video>
+        <a-video src="#tam-dj-no-sound" width="30" height="30" position="-20 0 0" rotation="0 -90 0" geometry="primitive: circle"scale="15 15 15" opacity="0.9"></a-video>
         
-        <a-box src="#TamTexture" position="0 6 0" rotation="0 0 2" scale="2 2 2">
+        <a-box src="#TamTexture" position="0 20 0" rotation="0 88 78" scale="2 2 2" opacity="0.55">
             <a-animation attribute="position" to="0 4 0" direction="alternate" dur="4000"
             repeat="indefinite"></a-animation>
-            <a-animation attribute="rotation" to="360 360 60" direction="alternate" dur="4000"
+            <a-animation attribute="rotation" to="0 0 0" direction="alternate" dur="4000"
             repeat="indefinite"></a-animation>
         </a-box>
         
@@ -46,12 +48,14 @@
         
     
         <a-entity 
-        id="uncoemail"
-        href="mailto:uncoolpeoplemanagement@gmail.com" 
+        class="cursor-listener"          
+        id="unco-email"
+        geometry="primitive: plane; width: auto; height: auto"
+        material="color: black; opacity: .2; "
         position="0 -5 0"   
         rotation="-90 0 0" 
         anchor="align"          
-        text="width: 14; 
+        text="width: 15; 
         align: center;
         value:For Bookings, exclusives, collaborations and general enquiries contact uncoolpeoplemanagement@gmail.com; 
         color:white"          
@@ -67,8 +71,35 @@
     <a-cursor></a-cursor>
   </a-camera>
         
-        <a-sky src="#sky2"></a-sky>
+        <a-sky src="#sky"></a-sky>
+        
+        
+        
       
     </a-scene>
+      
+      <script>
+        
+          
+          var email = document.querySelector('#unco-email');
+          email.addEventListener("click", function(){
+              window.open('mailto:uncoolpeoplemanagement@gmail.com','_self')
+              
+          })
+          email.addEventListener("mouseenter", function(){
+              material.opacity = 5;
+          })
+          
+          
+          var box = document.querySelector('a-box');
+          box.addEventListener("click", function(){
+              window.open('unco.html','_self')
+              
+          })
+      
+      
+      </script>
+      
+      
   </body>
 </html>
